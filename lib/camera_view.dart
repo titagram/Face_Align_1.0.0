@@ -83,8 +83,8 @@ class _CameraViewState extends State<CameraView> {
         children: <Widget>[
           Center(
             child: _changingCameraLens
-                ? Center(
-                    child: const Text('Changing camera lens'),
+                ? const Center(
+                    child: Text('Changing camera lens'),
                   )
                 : CameraPreview(
                     _controller!,
@@ -94,8 +94,8 @@ class _CameraViewState extends State<CameraView> {
           //_backButton(),
           _switchLiveCameraToggle(),
           _detectionViewModeToggle(),
-          _zoomControl(),
-          _exposureControl(),
+          //_zoomControl(),
+          //_exposureControl(),
         ],
       ),
     );
@@ -111,7 +111,7 @@ class _CameraViewState extends State<CameraView> {
             heroTag: Object(),
             onPressed: () => Navigator.of(context).pop(),
             backgroundColor: Colors.black54,
-            child: Icon(
+            child: const Icon(
               Icons.arrow_back_ios_outlined,
               size: 20,
             ),
